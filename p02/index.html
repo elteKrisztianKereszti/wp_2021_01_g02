@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)http://webprogramozas.inf.elte.hu/#!/subjects/webprog-eng/practices/02 -->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="hsl(185, 23%, 41%)" />
+    <title>Practice 02. – Web programming | ELTE IK Webprogramozás</title>
+    <link rel="stylesheet" href="./index_files/mdss.min.css" />
+    <link
+      rel="shortcut icon"
+      href="https://cdn.jsdelivr.net/gh/elte-fi/www-assets@19.10.16/images/logos/elte-favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./index_files/prism.css" />
+  </head>
+  <body>
+    <header>
+      <a href="http://webprogramozas.inf.elte.hu/#!/index" class="">
+        <img class="left floated" src="./index_files/elte-logo.png" />
+        <span class="left floated">ELTE Informatikai Kar<br />Webprogramozás</span>
+      </a>
+    </header>
+
+    <hr />
+
+    <nav class="sticky three center aligned columns">
+      <a href="http://webprogramozas.inf.elte.hu/#!" class="primary card"><strong>Tantárgyak</strong></a>
+      <a href="http://webprogramozas.inf.elte.hu/#!/materials" class="primary card"><strong>Tananyagok</strong></a>
+      <a href="http://webprogramozas.inf.elte.hu/#!/projects" class="primary card"><strong>Projektek</strong></a>
+    </nav>
+
+    <main>
+      <style type="text/css">
+        main img {
+          max-width: 100%;
+        }
+        main ul p,
+        main ol p {
+          display: block;
+        }
+      </style>
+      <h1 id="practice-02.-%E2%80%93-web-programming">Practice 02. – Web programming</h1>
+      <ol>
+        <li>
+          <p>Write "Hello world!" to the</p>
+          <p>a. console,</p>
+          <p>b. popup window,</p>
+          <p>c. document.</p>
+          <div class="blockquote">
+            <h4>Solution</h4>
+          </div>
+        </li>
+        <li>
+          <p>
+            Ask for a number <code>N</code>, and write "Hello World!" <code>N</code> times with increasing font size to
+            the document!
+          </p>
+          <div class="blockquote">
+            <h4>Solution</h4>
+          </div>
+        </li>
+        <li>
+          <p>Get an N number and make it an NxN multiplication table.</p>
+          <div class="solution_container">
+            <h4>Solution</h4>
+            <input id="txt3number" type="text" />
+            <button id="btn3renderer">Render</button>
+            <div id="div3Sol">
+            </div>
+          </div>
+        </li>
+        <li>
+          <p>Write a program that calculates the circumference of a circle!</p>
+          <div class="solution_container">
+            <h4>Solution</h4>
+            <input id="txt4radius" type="text" />
+            <button id="btn4calculate">Get it</button>
+            <div id="div4Sol">
+            </div>
+          </div>
+        </li>
+        <li>
+          <p>On page load, display the maiden name field, if the female radio button is checked!</p>
+          <pre
+            class="language-html"
+            tabindex="0"
+          ><code class="  language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>radio<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sex<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>male<span class="token punctuation">"</span></span> <span class="token attr-name">checked</span><span class="token punctuation">&gt;</span></span> male
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>radio<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sex<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>female<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span> female
+Maiden name: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>maiden_name<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+          <div class="solution_container">
+            <h4>Solution</h4>
+          </div>
+        </li>
+        <li>
+          <p>On page load, list the urls of all of the the hyperlinks!</p>
+          <pre
+            class="language-html"
+            tabindex="0"
+          ><code class="  language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.elte.hu<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>ELTE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://webprogramozas.inf.elte.hu<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Web programming<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.inf.elte.hu<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>ELTE Faculty of Informatics<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>urls<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+          <div class="solution_container">
+            <h4>Solution</h4>
+            <a href="http://www.elte.hu">ELTE</a>
+            <a href="http://webprogramozas.inf.elte.hu">Web programming</a>
+            <a href="http://www.inf.elte.hu">ELTE Faculty of Informatics</a>
+            <ul id="urls"></ul>
+          </div>
+        </li>
+        <li>
+          <p>
+            On page load, create a table of contents from the <code>h1</code>,<code> h2</code>, <code>h3</code>, etc.
+            elements.
+          </p>
+          <div class="solution_container">
+            <h4>Solution</h4>
+          </div>
+        </li>
+        <li>
+          <p>In a text field write an URL of an image. By clicking a button show the image in the document!</p>
+          <div class="solution_container">
+            <h4>Solution</h4>
+          </div>
+        </li>
+        <li>
+          <p>
+            Two text input fields and a button are given. Clicking on a button copy the content of one input field into
+            the other!
+          </p>
+          <div class="solution_container">
+            <h4>Solution</h4>
+          </div>
+        </li>
+        <li>
+          <p>Write a counter component!</p>
+          <p>
+            a. The counter consists of a readonly input field and two buttons (increase, decrease). By pressing the
+            buttons the number in the input field increases or decreases by 1.
+          </p>
+          <p>
+            b. Define a minimum and a maximum value for the counter. If the number reaches one of them, then make the
+            corresponding button disabled!
+          </p>
+          <div class="solution_container">
+            <h4>Solution</h4>
+          </div>
+        </li>
+        <li>
+          <p>
+            Write an application for calculating the compound interest! Three text inputs are given: the original amount
+            of money, the interest value, and the period of time in years. Show a table where every row shows the amount
+            of money in every year.
+          </p>
+          <div class="solution_container">
+            <h4>Solution</h4>
+          </div>
+        </li>
+        <li>
+          <p>
+            The computer thinks of a number! Guess the number! The computer answers whether the guessed number is less
+            or greater than the thought number, or is equal to it.
+          </p>
+          <div class="solution_container">
+            <h4>Solution</h4>
+          </div>
+        </li>
+        <li>
+          <p>In a library catalogue book data are given. For one book we store:</p>
+          <ul>
+            <li>author</li>
+            <li>title</li>
+            <li>year of publish</li>
+            <li>publisher</li>
+          </ul>
+          <p>a. Ask a year in an input field, and list those books which were published in that year!</p>
+          <p>
+            b. Fill a dropdown list with the name of the publishers. Selecting one publisher show the books of that
+            publisher in a table!
+          </p>
+          <p>
+            c. Typing in a text input, for every keystroke refresh a list of books which contains the typed-in
+            substring.
+          </p>
+          <div class="solution_container">
+            <h4>Solution</h4>
+          </div>
+        </li>
+      </ol>
+    </main>
+
+    <footer class="three columns">
+      <div class="center aligned">© ELTE IK 2019.</div>
+      <div class="center aligned">Horváth Győző</div>
+      <div class="center aligned">
+        Powered by <a href="https://github.com/vimtaai/gumdrop">Gumdrop</a> and
+        <a href="https://github.com/vimtaai/mdss">MDSS</a>
+      </div>
+    </footer>
+
+    <script crossorigin="" src="./index_files/gumdrop@4.1.4"></script>
+    <script type="text/javascript" src="task03.js"></script>
+    <script type="text/javascript" src="task04.js"></script>
+    <script type="text/javascript" src="task06.js"></script>
+  </body>
+</html>
