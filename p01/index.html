@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>First practice</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>First practice</h1>
+    <script type="text/javascript">
+      let number = 42;
+      console.log(number);
+
+      let numberInStr = '42';
+      console.log(numberInStr);
+      
+      let isTrue = true;
+      console.log(isTrue);
+      
+      let v1;
+
+      if (number == numberInStr) {
+        console.log('is True');
+      }
+
+      if (number === numberInStr) {
+        console.log('is True');
+      }
+      else {
+        console.log('is False');
+      }
+
+      number = "Foo";
+      console.log(number);
+
+
+      let numbers = [ 1, 2, 4, -3, 42, 100, -1, 10 ];
+      console.log(numbers[3]);
+
+      for (let i = 0; i < numbers.length; ++i) {
+        console.log(numbers[i]);
+      }
+
+      for (let n of numbers) {
+        console.log(n);
+      } 
+
+      numbers.forEach(n => {
+        console.log(n);
+      });
+      
+
+      function filter(numbers, cond) {
+        let negativeNumbers = [];
+
+        for (let index = 0; index < numbers.length; index++) {
+          if (cond(numbers[index])) {
+            negativeNumbers.push(numbers[index])
+          }
+        }
+
+        return negativeNumbers;
+      }
+
+      console.log(filter([1, 2, 3, -4, 5], (x => x < 0)));
+      console.log(filter([1, -2, 3, -4, 5], (x => x < 0)));
+      console.log(filter([1, 2, 3, 4, 5], (x => x < 0)));
+
+      [1, -2, -3, -4, 5].filter((x => x < 0));
+
+      console.log(numbers.filter(x => x > 10));
+
+      let sum = 0;
+      for (let n of numbers) {
+        sum += n;
+      } 
+      console.log(sum);
+
+      console.log(numbers.reduce((pv, cv) => (pv + cv)));
+
+      let max = numbers.reduce((previousValue, currentValue) => previousValue > currentValue ? currentValue : previousValue);
+      console.log(max);
+
+
+      console.log(numbers.reduce((pv, cv) => cv > 0 ? (pv + cv) : pv));
+
+      function foo(pv, cv) {
+        console.log(pv, cv);
+        return cv;
+      }
+      let t = [ 1, 2, 4, 8, 16 ];
+      t.reduce(foo);
+
+      console.log(t.map(x => x * x));
+
+      
+      let movie = {
+        title: 'Bad Taste',
+        year: 1987,
+        director: 'Peter Jackson',
+      };
+
+      let movie2 = {
+        title: 'Avengers',
+        year: 2012,
+        director: 'unkown',
+      };
+
+      let movie3 = {
+        title: 'Hello Kitty and Deadpool awesome adventures',
+        year: 2020,
+        director: 'unkown',
+      };
+
+      let movies = [ movie, movie2, movie3 ];
+
+      console.log(movies);
+
+      let youngerMovie = movies.reduce((previousMovie, currentMovie) => previousMovie.year > currentMovie.year ? currentMovie : previousMovie);
+      console.log(youngerMovie.title);
+
+      console.log("Hello world");
+    </script>
+  </body>
+</html>
