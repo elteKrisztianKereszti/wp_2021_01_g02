@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)http://webprogramozas.inf.elte.hu/#!/subjects/webprog-eng/practices/03 -->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="hsl(185, 23%, 41%)" />
+    <title>Practice 03. – Web programming | ELTE IK Webprogramozás</title>
+    <link rel="stylesheet" href="./index_files/mdss.min.css" />
+    <link
+      rel="shortcut icon"
+      href="https://cdn.jsdelivr.net/gh/elte-fi/www-assets@19.10.16/images/logos/elte-favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./index_files/prism.css" />
+  </head>
+  <body>
+    <header>
+      <a href="http://webprogramozas.inf.elte.hu/#!/index" class="">
+        <img class="left floated" src="./index_files/elte-logo.png" />
+        <span class="left floated">ELTE Informatikai Kar<br />Webprogramozás</span>
+      </a>
+    </header>
+
+    <hr />
+
+    <nav class="sticky three center aligned columns">
+      <a href="http://webprogramozas.inf.elte.hu/#!" class="primary card"><strong>Tantárgyak</strong></a>
+      <a href="http://webprogramozas.inf.elte.hu/#!/materials" class="primary card"><strong>Tananyagok</strong></a>
+      <a href="http://webprogramozas.inf.elte.hu/#!/projects" class="primary card"><strong>Projektek</strong></a>
+    </nav>
+
+    <main>
+      <style type="text/css">
+        main img {
+          max-width: 100%;
+        }
+        main ul p,
+        main ol p {
+          display: block;
+        }
+      </style>
+      <h1 id="practice-03.-%E2%80%93-web-programming">Practice 03. – Web programming</h1>
+      <ol>
+        <li>
+          <p>The following HTML is given. When clicking write to the console:</p>
+          <p>a. the object to which the event handler is registered;</p>
+          <p>b. the type of the event;</p>
+          <p>c. the pressed mouse button;</p>
+          <p>d. the position of the mouse;</p>
+          <p>e. the original source object of the event;</p>
+          <p>f. if the event is coming from a <code>span</code>, then the text of the <code>span</code> element;</p>
+          <p>g. if the text of a link is "libero", do not follow the link.</p>
+          <pre
+            class="language-html"
+            tabindex="0"
+          ><code class="  language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Lorem ipsum <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://translate.google.com/#la/hu/dolor<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>dolor<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span> sit amet, <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>consectetur<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span> adipiscing elit. <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>Proin ut faucibus justo.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span> Nullam vulputate iaculis blandit. Sed at placerat mi. Cras volutpat, urna sed accumsan dapibus, <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.libero.hu<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>libero<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span> massa cursus felis, eget consectetur libero orci ut sem. Fusce id mollis nibh. In vulputate et turpis eu semper. Sed pharetra tincidunt velit. Fusce pharetra eros vitae placerat luctus. <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>Fusce cursus ultrices tellus et lobortis.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+          <div class="solution_container">
+            <h4>Solution</h4>
+            <p id="t1paragraph">
+              Lorem ipsum <a href="http://translate.google.com/#la/hu/dolor">dolor</a> sit amet,
+              <span>consectetur</span> adipiscing elit. <span>Proin ut faucibus justo.</span> Nullam vulputate iaculis
+              blandit. Sed at placerat mi. Cras volutpat, urna sed accumsan dapibus,
+              <a href="http://www.libero.hu">libero</a> massa cursus felis, eget consectetur libero orci ut sem. Fusce
+              id mollis nibh. In vulputate et turpis eu semper. Sed pharetra tincidunt velit. Fusce pharetra eros vitae
+              placerat luctus. <span>Fusce cursus ultrices tellus et lobortis.</span>
+            </p>
+          </div>
+        </li>
+        <li>
+          <p>Prepare a text input that accepts only numbers.</p>
+          <p>a. Do not display any character other than numbers.</p>
+          <p>b. The solution should work for any text input with a <code>number</code> class attribute.</p>
+          <div class="solution_container">
+            <h4>Solution</h4>
+            <p>a) part</p>
+            <input id="t4txtNumber" type="text" />
+            <p>b) part (with class)</p>
+            <input class="number" type="text" />
+            <input class="number" type="text" />
+            <input class="number" type="text" />
+            <input class="number" type="text" />
+            <input class="number" type="text" />
+            <input class="number" type="text" />
+            <p>b) part (without class)</p>
+            <input type="text" />
+          </div>
+        </li>
+        <li>
+          <p>Let's disable any link on the page that does not point to the <code>elte.hu</code> domain!</p>
+          <pre
+            class="language-html"
+            tabindex="0"
+          ><code class="  language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.elte.hu<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>ELTE honlapja<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://webprogramozas.inf.elte.hu<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Webprogramozás szerver<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://developer.mozilla.org/en-US/docs/Web/JavaScript<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>JavaScript referencia<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://jsfiddle.net/<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>JavaScript homokozó<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+
+          <div class="solution_container">
+            <h4>Solution</h4>
+            <a href="http://www.elte.hu">ELTE honlapja</a><br />
+            <a href="http://webprogramozas.inf.elte.hu">Webprogramozás szerver</a><br />
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript referencia</a><br />
+            <a href="http://jsfiddle.net/">JavaScript homokozó</a><br />
+          </div>
+        </li>
+        <li>
+          <p>We store the title, year of release, length, and director for a few movies.</p>
+          <p>
+            a. Since there are many films, we would like to have a user interface where only a movie title that contains
+            the text written in the filter box appears in a list.
+          </p>
+          <p>b. Hovering the title of the movie, we would like to see all the details of the movie.</p>
+          <div class="solution_container">
+            <h4>Solution</h4>
+            <input type="text" id="t4txtFilter" />
+            <ul id="t4MovieList"></ul>
+            <div id="t4MovieDetails"></div>
+          </div>
+        </li>
+        <li>
+          <p>Make a memory game!</p>
+          <p>
+            a. Store numbers in the even number of cells, and find the pairs by turning over only two cards at a time!
+          </p>
+          <p>b. Count how many steps you can solve the game!</p>
+          <p>c. Make it possible to play with more players, in this case indicate who has the turn!</p>
+        </li>
+        <div class="solution_container">
+          <h4>Solution</h4>
+        </div>
+        <li>
+          <p>
+            Make a hang-man game! Select a word from a baked-in list, and then draw as many letter boxes as the length
+            of the word. Show a row of buttons where we can guess the individual letters. If the selected letter is
+            right, show the letters in the their positions. If we were wrong, count the incorrect attempts. If it
+            reaches a predefined value, we lose. If all the letters of the word have been revealed, we win! In addition
+            to the counter, we can draw the hang-man with SVG elements!
+          </p>
+          <div class="solution_container">
+            <h4>Solution</h4>
+          </div>
+        </li>
+        <li>
+          <p>A range input field is given.</p>
+          <p>
+            a. Dragging the slider, display the value of the slider next to the field. Think about the event to be used!
+            Write the value in some element next to the slider! Try to create this item dynamically and insert it with
+            the
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentElement"
+              ><code>insertAdjacentElement()</code></a
+            >
+            DOM method!
+          </p>
+          <p>b. Make the above solution work for any range slider that has a <code>display-value</code> class name!</p>
+          <p>c. Dragging the slider, display the value above the slider.</p>
+          <div class="solution_container">
+            <h4>Solution</h4>
+          </div>
+        </li>
+        <li>
+          <p>
+            A FAQ page is given. An element with <code>faq</code> style class contains the questions and answers. The
+            questions are in <code>h2</code> elements, the answers are in <code>p</code> elements below the
+            <code>h2</code> elements. Toggle the visibility of the answers by clicking on the questions!
+          </p>
+          <pre
+            class="language-html"
+            tabindex="0"
+          ><code class="  language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>faq<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>Question1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Long answer for question1.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>Question2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Long answer for question2.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>Question3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Long answer for question3.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>Question4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Long answer for question4.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+          <div class="solution_container">
+            <h4>Solution</h4>
+          </div>
+        </li>
+        <li>
+          <p>
+            Create an input field accepting a bank account number, placing a space between every four-letter groups!
+          </p>
+          <div class="solution_container">
+            <h4>Solution</h4>
+          </div>
+        </li>
+        <li>
+          <p>
+            We store the title, publication year, length and director of some movies. As there may be many films, we
+            want to use a user interface where only those movie titles appear in a list that contain the text written in
+            a filter box. If we move the mouse over a movie title, display all the details of that movie below the list.
+          </p>
+          <div class="solution_container">
+            <h4>Solution</h4>
+          </div>
+        </li>
+        <li>
+          <p>
+            Create a screencast mode on a page! Display the pressed keyboard keys in a transparent bar at the bottom of
+            the page! Handle the special characters separately, eg. <code>Ctrl + A</code>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Make your own context menu by clicking with the right mouse button! Use the <code>contextmenu</code> event!
+          </p>
+        </li>
+      </ol>
+    </main>
+
+    <footer class="three columns">
+      <div class="center aligned">© ELTE IK 2019.</div>
+      <div class="center aligned">Horváth Győző</div>
+      <div class="center aligned">
+        Powered by <a href="https://github.com/vimtaai/gumdrop">Gumdrop</a> and
+        <a href="https://github.com/vimtaai/mdss">MDSS</a>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="./movies.js"></script>
+    <script type="text/javascript" src="./task01.js"></script>
+    <script type="text/javascript" src="./task02.js"></script>
+    <script type="text/javascript" src="./task04.js"></script>
+  </body>
+</html>
