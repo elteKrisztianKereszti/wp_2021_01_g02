@@ -3,12 +3,13 @@ let treasureLocation = {
   x:0,
   y:0
 }
-
+let missClickCounter = 0;
 
 let map = document.querySelector('#map');
 
 let sizeInput = document.querySelector('#size');
 let newGameBtn = document.querySelector('#newGame');
+let missClick = document.querySelector('#missClick');
 newGameBtn.addEventListener('click', () => {
   newGame(sizeInput.value)
 })
@@ -28,6 +29,9 @@ function onMapClick(e) {
     setTimeout(() => {
       newGame();
     }, 2000);
+  }
+  else {
+    missClick.innerHTML = ++missClickCounter;
   }
 }
 
@@ -50,6 +54,7 @@ function newGame(size) {
     y: Math.floor(Math.random() * (0+size))
   }
   renderMap(size);
+  missClickCounter = 0;
   console.log(treasureLocation);
 }
 
