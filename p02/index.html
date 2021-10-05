@@ -142,7 +142,7 @@ Maiden name: <span class="token tag"><span class="token tag"><span class="token 
           <div class="solution_container">
             <h4>Solution</h4>
             <input id="t9inputSrc" type="text"/> 
-            <button id="t9btnCopy">Load image</button> 
+            <button id="t9btnCopy">==  (copy) ==></button> 
             <input id="t9inputDest" type="text"/> 
           </div>
         </li>
@@ -158,6 +158,9 @@ Maiden name: <span class="token tag"><span class="token tag"><span class="token 
           </p>
           <div class="solution_container">
             <h4>Solution</h4>
+            <input id="t10counterValue" type="text" readonly/> 
+            <button id="t10counterDec">-</button> 
+            <button id="t10counterInc">+</button> 
           </div>
         </li>
         <li>
@@ -168,6 +171,12 @@ Maiden name: <span class="token tag"><span class="token tag"><span class="token 
           </p>
           <div class="solution_container">
             <h4>Solution</h4>
+            <input id="t11originalAmount" type="text"/> 
+            <input id="t11interestValue" type="text"/> 
+            <input id="t11period" type="text"/> 
+            <button id="t11show">Show!</button> 
+            <table id="t11result"></table> 
+          </div>
           </div>
         </li>
         <li>
@@ -177,6 +186,9 @@ Maiden name: <span class="token tag"><span class="token tag"><span class="token 
           </p>
           <div class="solution_container">
             <h4>Solution</h4>
+            <input id="t12tip" type="text"/> 
+            <button id="t12check">Check</button> 
+            <span id="t12result"></span> 
           </div>
         </li>
         <li>
@@ -198,6 +210,23 @@ Maiden name: <span class="token tag"><span class="token tag"><span class="token 
           </p>
           <div class="solution_container">
             <h4>Solution</h4>
+            <h2>part a)</h2>
+            <input id="t13aYearFilter" type="text"/>
+            <ul id="t13aResult"></ul>
+            <h2>part b)</h2>
+            <select id="t13bPublisherFilter">
+            </select>  
+            <ul id="t13bResult"></ul>
+            <h2>part c)</h2>
+            <input id="t13cTitleFilter" type="text"/>
+            <ul id="t13cResult"></ul>
+            <h2>part a+b+c</h2>
+
+            <input id="t13allInYearFilter" type="text"/>
+            <select id="t13allInPublisherFilter">
+            </select>  
+            <input id="t13allInTitleFilter" type="text"/>
+            <table id="t13allInResult"></table>
           </div>
         </li>
       </ol>
@@ -217,5 +246,10 @@ Maiden name: <span class="token tag"><span class="token tag"><span class="token 
     <script type="text/javascript" src="task04.js"></script>
     <script type="text/javascript" src="task06.js"></script>
     <script type="text/javascript" src="task08.js"></script>
+    <script type="text/javascript" src="task09.js"></script>
+    <script type="text/javascript" src="task10.js"></script>
+    <script type="text/javascript" src="task11.js"></script>
+    <script type="text/javascript" src="task12.js"></script>
+    <script type="text/javascript" src="task13.js"></script>
   </body>
 </html>

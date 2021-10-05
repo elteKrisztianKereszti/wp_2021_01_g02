@@ -10,4 +10,3 @@ function t4txtFilterOnInput(event) {
   t4MovieList.innerHTML = resultOfHtml;
   console.log(filetredMovies);
 }
-
