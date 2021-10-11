@@ -127,10 +127,25 @@
           </p>
           <p>b. Count how many steps you can solve the game!</p>
           <p>c. Make it possible to play with more players, in this case indicate who has the turn!</p>
+          <div class="solution_container">
+            <style>
+            #t5MemoryTable td {
+              border: 1px solid lightgray;
+              width: 50px;
+              height: 50px;
+              padding: 0;
+              text-align: center;
+            }
+
+            </style>
+            <h4>Solution</h4>
+            <p>Players num<input id="t5playerNum" value="1"/></p>
+            <button id="t5newGame">New game</button>
+            <table id="t5playerStat"></table>
+            <p id="t5currentPlayer"></p>
+            <table id="t5MemoryTable"></table>
+          </div>
         </li>
-        <div class="solution_container">
-          <h4>Solution</h4>
-        </div>
         <li>
           <p>
             Make a hang-man game! Select a word from a baked-in list, and then draw as many letter boxes as the length
@@ -140,7 +155,20 @@
             to the counter, we can draw the hang-man with SVG elements!
           </p>
           <div class="solution_container">
+            <style>
+              .letterbox {
+                border: 1px black solid;
+                width: 20px;
+                height: 20px;
+                text-align: center;
+              }
+
+            </style>
             <h4>Solution</h4>
+            <button id="t6newGame">New game</button>
+            <table id="t6Secret"></table>
+            <table id="t6letters"></table>
+            <p id ="t6mistakeCounter"></p>
           </div>
         </li>
         <li>
@@ -182,6 +210,16 @@
 </code></pre>
           <div class="solution_container">
             <h4>Solution</h4>
+            <div class="faq">
+              <h2>Question1</h2>
+              <p>Long answer for question1.</p>
+              <h2>Question2</h2>
+              <p>Long answer for question2.</p>
+              <h2>Question3</h2>
+              <p>Long answer for question3.</p>
+              <h2>Question4</h2>
+              <p>Long answer for question4.</p>
+          </div>
           </div>
         </li>
         <li>
@@ -212,6 +250,18 @@
           <p>
             Make your own context menu by clicking with the right mouse button! Use the <code>contextmenu</code> event!
           </p>
+          <style>
+            .custom-menu {
+              width: 200px;
+              border: 3px solid black;
+              background-color: yellow;
+            }
+            .custom-menu-item {
+              height: 20px;
+              border: 1px solid black;
+            }
+            
+          </style>
         </li>
       </ol>
     </main>
@@ -225,9 +275,15 @@
       </div>
     </footer>
 
-    <script type="text/javascript" src="./movies.js"></script>
-    <script type="text/javascript" src="./task01.js"></script>
-    <script type="text/javascript" src="./task02.js"></script>
-    <script type="text/javascript" src="./task04.js"></script>
+    <script crossorigin="" src="./index_files/gumdrop@4.1.4"></script>
+    <script type="text/javascript" src="task01.js"></script>
+    <script type="text/javascript" src="task02.js"></script>
+    <script type="text/javascript" src="task03.js"></script>
+    <script type="text/javascript" src="movies.js"></script>
+    <script type="text/javascript" src="task04.js"></script>
+    <script type="text/javascript" src="task05.js"></script>
+    <script type="text/javascript" src="task06.js"></script>
+    <script type="text/javascript" src="task08.js"></script>
+    <script type="text/javascript" src="task12.js"></script>
   </body>
 </html>
