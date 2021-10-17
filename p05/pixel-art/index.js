@@ -1,10 +1,14 @@
 console.log('Loaded');
 
 let grid = {
-  table: undefined,
+  id: 0,
+  pixels: undefined,
   currentColor: '#ff0000',
-  paintCell: function(row, colum) {
-    this.table[row][colum] = this.currentColor;
+  paintCell: function(row, column) {
+    this.pixels[row][column] = this.currentColor;
+  },
+  clearColor: function(row, column) {    
+    this.pixels[row][column] = undefined;
   },
   setColor: function(newColor) {
     this.currentColor = newColor;
@@ -37,23 +41,29 @@ let previewGrid = document.querySelector('.preview');
 let editGrid = document.querySelector('.edit');
 let colorPicker = document.querySelector('#colorPicker');
 let saveButton = document.querySelector('#save');
+let pixelArtsUl = document.querySelector('#pixel-arts');
 
 submitButton.addEventListener('click', newGrid);
 editGrid.addEventListener('click', onEditGridClick);
+editGrid.addEventListener('contextmenu', onEditGridContextMenu);
 colorPicker.addEventListener('change', onColorPickerChange);
 save.addEventListener('click', onSaveClick);
+pixelArtsUl.addEventListener('click', onPixelArtsUlClick);
 
-function onSaveClick() {  
-  let data = localStorage['pixelArts'] ? JSON.parse(localStorage['pixelArts']) : [];
+function onSaveClick() {
+  if (grid.id != 0) {
+    let pixelArt = pixelArts.find(pa => pa.id == grid.id);
+    pixelArt.pixels = JSON.parse(JSON.stringify(grid.pixels));
+  }
+  else {
+    pixelArts.push({
+      id: Date.now(),
+      pixels: JSON.parse(JSON.stringify(grid.pixels)),
+    });
+  }[]
 
-  data.push({
-    id: pixelArts[pixelArts.length-1].id + 1,
-    pixels: grid.table
-  })
-
-  localStorage['pixelArts'] = JSON.stringify(data);
-
-  console.log(data);
+  localStorage['pixelArts'] = JSON.stringify(pixelArts);
+  listAllPixelArts();
 }
 
 function onColorPickerChange(event) {
@@ -74,7 +84,7 @@ function onEditGridClick(event) {
 }
 
 function renderTables() {
-  let innerHtml = generateTable();
+  let innerHtml = generateTable(grid.pixels);
   previewGrid.innerHTML = innerHtml;;
   editGrid.innerHTML = innerHtml;
 }
@@ -85,28 +95,26 @@ function newGrid(event) {
   let width = parseInt(document.querySelector('#width').value);
   let height = parseInt(document.querySelector('#height').value);
 
-  grid.table = new Array(height);
-  for (let r = 0; r < grid.table.length; r++) {
-    grid.table[r] = new Array(width);
+  grid.pixels = new Array(height);
+  for (let r = 0; r < grid.pixels.length; r++) {
+    grid.pixels[r] = new Array(width);
   }
+  grid.id = 0;
 
-  let innerHtml = generateTable();
-  previewGrid.innerHTML = innerHtml;
-  editGrid.innerHTML = innerHtml;
-
+  renderTables();
   colorPicker.value = grid.currentColor;
 }
 
-function generateTable() {
+function generateTable(pixels) {
   let innerHtml = '';
 
-  for (let r = 0; r < grid.table.length; ++r){
+  for (let r = 0; r < pixels.length; ++r){
     innerHtml += '<tr>';
-    for (let c = 0; c < grid.table[r].length; ++c){
+    for (let c = 0; c < pixels[r].length; ++c){
       innerHtml += '<td';
       innerHtml += ' data-row="' + r + '"';
       innerHtml += ' data-column="' + c + '"';
-      innerHtml += ' style="background-color:' + grid.table[r][c] + '"';
+      innerHtml += ' style="background-color:' + pixels[r][c] + '"';
       innerHtml += '>'
 
       innerHtml += '</td>'
@@ -117,3 +125,54 @@ function generateTable() {
   return innerHtml;
 }
 
+
+function onEditGridContextMenu(event) {
+  if (event.target.tagName !== 'TD') {
+    return;
+  }
+
+  let rowIndex = event.target.getAttribute('data-row');
+  let columnIndex = event.target.getAttribute('data-column');
+  event.preventDefault();
+  grid.clearColor(rowIndex, columnIndex);
+
+  renderTables();
+}
+function listAllPixelArts() {
+  let ulContent = '';
+  
+  pixelArts.forEach((pixelArt) => {
+    ulContent += '<li pixel-art-id=' + pixelArt.id + '>';
+    ulContent += '<table>' + generateTable(pixelArt.pixels) + '</table>';
+    ulContent += '</li>';
+  })
+
+  pixelArtsUl.innerHTML = ulContent;
+}
+
+function onPixelArtsUlClick(event) {
+  if (event.target.tagName === 'UL') {
+    return;
+  }
+
+  // look for LI => go up to LI
+  let currentElement = event.target;
+  while (currentElement.tagName !== 'LI') {
+    currentElement = currentElement.parentElement;
+  }
+
+  let pixelArtId = currentElement.getAttribute('pixel-art-id');
+  loadPixelArt(pixelArtId);
+}
+
+function loadPixelArt(pixelArtId) {
+
+  let pixelArt = pixelArts.find(pa => pa.id == pixelArtId);
+
+  grid.pixels = JSON.parse(JSON.stringify(pixelArt.pixels));
+  grid.id = pixelArt.id;
+
+  renderTables();
+}
+
+listAllPixelArts();
